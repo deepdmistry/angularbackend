@@ -3,8 +3,6 @@ package com.helloworld.angularbackend.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigInteger;
-
 /**
  * @author deepmistry on 1/13/18.
  */
@@ -13,15 +11,15 @@ import java.math.BigInteger;
 public class Hero {
 
     @Id
-    private BigInteger _id;
+    private String id;
     private String name;
 
-    public BigInteger get_id() {
-        return _id;
+    public String getId() {
+        return id;
     }
 
-    public void set_id(BigInteger _id) {
-        this._id = _id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {

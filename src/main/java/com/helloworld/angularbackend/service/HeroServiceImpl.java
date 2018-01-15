@@ -5,6 +5,7 @@ import com.helloworld.angularbackend.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -20,11 +21,18 @@ public class HeroServiceImpl implements HeroService {
         this.heroRepository = heroRepository;
     }
 
+    @Override
     public List<Hero> getHeroes() {
         return heroRepository.findAll();
     }
 
+    @Override
     public Hero getByName(String name) {
         return heroRepository.findByName(name);
+    }
+
+    @Override
+    public Hero getById(String id) {
+        return heroRepository.findById(id);
     }
 }

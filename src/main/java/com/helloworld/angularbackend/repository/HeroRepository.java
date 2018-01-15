@@ -13,11 +13,13 @@ import java.util.List;
  */
 
 @Repository
-public interface HeroRepository extends MongoRepository<Hero, BigInteger> {
+public interface HeroRepository extends MongoRepository<Hero, String> {
 
     @Override
     List<Hero> findAll();
 
     @Query("{name:'?0'}")
     Hero findByName(String name);
+
+    Hero findById(String id);
 }

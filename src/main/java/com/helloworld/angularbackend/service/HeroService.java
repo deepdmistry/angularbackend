@@ -2,6 +2,7 @@ package com.helloworld.angularbackend.service;
 
 import com.helloworld.angularbackend.model.Hero;
 
+import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -12,4 +13,6 @@ public interface HeroService {
     List<Hero> getHeroes();
 
     Hero getByName(String name);
+
+    Hero getById(String id);
 }

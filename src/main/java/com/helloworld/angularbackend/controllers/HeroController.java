@@ -5,6 +5,7 @@ import com.helloworld.angularbackend.service.HeroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -30,9 +31,15 @@ public class HeroController {
         return heroService.getHeroes();
     }
 
-    @RequestMapping("/get/{name}")
+    @RequestMapping("/getByName/{name}")
     @ResponseBody
     public Hero getByName(@PathVariable String name) {
         return heroService.getByName(name);
+    }
+
+    @RequestMapping("/{id}")
+    @ResponseBody
+    public Hero getById(@PathVariable String id) {
+        return heroService.getById(id);
     }
 }
