@@ -40,4 +40,11 @@ public class HeroServiceImpl implements HeroService {
     public void deleteById(String id) {
         heroRepository.delete(id);
     }
+
+    @Override
+    public Hero add(String name) {
+        Hero hero = new Hero();
+        hero.setName(name);
+        return heroRepository.insert(hero);
+    }
 }

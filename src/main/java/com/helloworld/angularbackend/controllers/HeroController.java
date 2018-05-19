@@ -43,6 +43,12 @@ public class HeroController {
         return heroService.getById(id);
     }
 
+    @RequestMapping(method = RequestMethod.POST)
+    @ResponseBody
+    public Hero add(@RequestBody Hero hero) {
+        return heroService.add(hero.getName());
+    }
+
     @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
     public void deleteById(@PathVariable String id) {
         heroService.deleteById(id);
