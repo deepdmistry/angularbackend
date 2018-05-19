@@ -35,4 +35,9 @@ public class HeroServiceImpl implements HeroService {
     public Hero getById(String id) {
         return heroRepository.findById(id);
     }
+
+    @Override
+    public void deleteById(String id) {
+        heroRepository.delete(id);
+    }
 }

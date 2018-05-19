@@ -15,4 +15,6 @@ public interface HeroService {
     Hero getByName(String name);
 
     Hero getById(String id);
+
+    void deleteById(String id);
 }

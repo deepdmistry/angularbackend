@@ -42,4 +42,9 @@ public class HeroController {
     public Hero getById(@PathVariable String id) {
         return heroService.getById(id);
     }
+
+    @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
+    public void deleteById(@PathVariable String id) {
+        heroService.deleteById(id);
+    }
 }
