@@ -11,7 +11,7 @@ public interface HeroService {
 
     List<Hero> getHeroes();
 
-    Hero getByName(String name);
+    List<Hero> getAllByTerm(String term);
 
     Hero getById(String id);
 

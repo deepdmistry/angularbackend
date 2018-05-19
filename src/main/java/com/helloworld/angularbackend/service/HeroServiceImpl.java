@@ -26,8 +26,8 @@ public class HeroServiceImpl implements HeroService {
     }
 
     @Override
-    public Hero getByName(String name) {
-        return heroRepository.findByName(name);
+    public List<Hero> getAllByTerm(String term) {
+        return heroRepository.getAllByTerm(term);
     }
 
     @Override

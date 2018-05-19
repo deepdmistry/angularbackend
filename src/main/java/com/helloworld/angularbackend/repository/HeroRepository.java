@@ -17,8 +17,8 @@ public interface HeroRepository extends MongoRepository<Hero, String> {
     @Override
     List<Hero> findAll();
 
-    @Query("{name:'?0'}")
-    Hero findByName(String name);
+    @Query("{name : {$regex : '.*?0.*'}}")
+    List<Hero> getAllByTerm(String term);
 
     Hero findById(String id);
 }
