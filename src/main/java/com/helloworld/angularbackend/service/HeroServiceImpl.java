@@ -5,7 +5,6 @@ import com.helloworld.angularbackend.repository.HeroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -42,9 +41,12 @@ public class HeroServiceImpl implements HeroService {
     }
 
     @Override
-    public Hero add(String name) {
-        Hero hero = new Hero();
-        hero.setName(name);
+    public Hero add(Hero hero) {
         return heroRepository.insert(hero);
+    }
+
+    @Override
+    public Hero update(Hero hero) {
+        return heroRepository.save(hero);
     }
 }

@@ -2,7 +2,6 @@ package com.helloworld.angularbackend.service;
 
 import com.helloworld.angularbackend.model.Hero;
 
-import java.math.BigInteger;
 import java.util.List;
 
 /**
@@ -18,5 +17,7 @@ public interface HeroService {
 
     void deleteById(String id);
 
-    Hero add(String name);
+    Hero add(Hero hero);
+
+    Hero update(Hero hero);
 }

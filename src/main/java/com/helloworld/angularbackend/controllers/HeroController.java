@@ -46,7 +46,13 @@ public class HeroController {
     @RequestMapping(method = RequestMethod.POST)
     @ResponseBody
     public Hero add(@RequestBody Hero hero) {
-        return heroService.add(hero.getName());
+        return heroService.add(hero);
+    }
+
+    @RequestMapping(method = RequestMethod.PUT)
+    @ResponseBody
+    public Hero update(@RequestBody Hero hero) {
+        return heroService.update(hero);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
